@@ -13456,5 +13456,4 @@ void main () {
   };
   return __toCommonJS(src_exports);
 })();
-module.exports = Spine;
-//# sourceMappingURL=spine-webgl.js.map
+export default Spine;
