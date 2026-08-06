@@ -1,3 +1,4 @@
+经过重构的 gandi scratch-render，使用了vite和ts构建
 scratch-render modified for use in [TurboWarp](https://turbowarp.org/)
 
 Changes to upstream:
