@@ -270,7 +270,7 @@ class SVGSkin extends Skin {
 
       this.resetMIPs();
 
-      if (typeof rotationCenter === "undefined")
+      if (rotationCenter == null)
         rotationCenter = this.calculateRotationCenter();
       // Compensate for viewbox offset.
       // See https://github.com/LLK/scratch-render/pull/90.
