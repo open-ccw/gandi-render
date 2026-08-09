@@ -1,6 +1,6 @@
 {
   "name": "@open-ccw/scratch-render",
-  "version": "9.9.13",
+  "version": "9.9.14",
   "description": "WebGL Renderer for Scratch 3.0 patched for Gandi IDE",
   "author": "Massachusetts Institute of Technology",
   "license": "BSD-3-Clause",
@@ -36,7 +36,9 @@
   },
   "dependencies": {
     "events": "^3.3.0",
+    "grapheme-breaker": "^0.3.2",
     "hull.js": "0.2.10",
+    "linebreak": "^1.1.0",
     "scratch-svg-renderer": "^3.1.19",
     "twgl.js": "5.3"
   }
