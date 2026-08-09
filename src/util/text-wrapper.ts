@@ -38,18 +38,18 @@ class TextWrapper {
   }
 
   /**
-   * Lazily create (and reuse) the line-breaking segmenter.
-   * @returns {Intl.Segmenter} segmenter with granularity "line".
+   * Lazily create (and reuse) the word-boundary segmenter.
+   *
+   * Note: `Intl.Segmenter` only standardizes the `grapheme`, `word` and
+   * `sentence` granularities. `granularity: "line"` is not part of the standard
+   * and throws a RangeError in most browsers, so we approximate line-break
+   * opportunities with word boundaries (spaces / punctuation / hard breaks).
+   * @returns {Intl.Segmenter} segmenter with granularity "word".
    * @private
    */
   private _getLineSegmenter(): Intl.Segmenter {
     if (!this._lineSegmenter) {
-      // `granularity: "line"` is supported at runtime but only typed in ES2024
-      // Intl definitions (ES2022.Intl only exposes grapheme/word/sentence), so
-      // cast through `unknown` to keep the native line-break capability.
-      this._lineSegmenter = new Intl.Segmenter(undefined, {
-        granularity: "line"
-      } as unknown as Intl.SegmenterOptions);
+      this._lineSegmenter = new Intl.Segmenter(undefined, { granularity: "word" });
     }
     return this._lineSegmenter;
   }

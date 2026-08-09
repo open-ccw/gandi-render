@@ -1,6 +1,6 @@
 {
   "name": "@open-ccw/scratch-render",
-  "version": "9.9.15",
+  "version": "9.9.16",
   "description": "WebGL Renderer for Scratch 3.0 patched for Gandi IDE",
   "author": "Massachusetts Institute of Technology",
   "license": "BSD-3-Clause",
