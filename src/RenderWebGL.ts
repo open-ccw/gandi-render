@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import EventEmitter from "events";
 
-import hull from "hull.js";
+import hull from "@turbowarp/ancient-hull.js";
 import * as twgl from "twgl.js";
 
 import BitmapSkin from "./BitmapSkin";
