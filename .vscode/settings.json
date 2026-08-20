@@ -1,1 +1,8 @@
-{ "editor.formatOnSave": true }
+{
+  "editor.formatOnSave": true,
+  "editor.quickSuggestions": {
+    "other": "offWhenInlineCompletions",
+    "comments": true,
+    "strings": "off"
+  }
+}
